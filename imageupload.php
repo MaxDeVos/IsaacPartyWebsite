@@ -16,6 +16,7 @@
     <form action="imageupload.php" method="post" enctype="multipart/form-data">
     
     Wats ur nayme <input type="text" name="personName" id="personName" required><br> 
+    Wats ur email <input type="text" name="email" id="email" required><br> 
     Choose a picktre <input type="file" name="fileToUpload" id="fileToUpload"><br>
     <input type="submit" value="Whooooosh" name="submit">
         </form>

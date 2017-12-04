@@ -8,6 +8,7 @@ $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
     $imageName = $_POST['personName'];
+    $email = $_POST['email'];
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
         $uploadOk = 1;
@@ -36,7 +37,7 @@ if ($uploadOk == 0) {
 
 $info = pathinfo($_FILES['fileToUpload']['name']);
 $ext = $info['extension']; // get the extension of the file
-$newname = $imageName.".".$ext; 
+$newname = $imageName."-".$email.".".$ext; 
 $target = 'uploads/'.$newname;
 
     if (move_uploaded_file( $_FILES['fileToUpload']['tmp_name'], $target)) {
