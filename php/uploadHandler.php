@@ -19,19 +19,17 @@ if(isset($_POST["submit"])) {
 
 // Check if file already exists
 if (file_exists($target_file)) {
-    echo "Ya'll alredy uplodded ur picktre";
     $uploadOk = 0;
 }
 
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
-    echo "That ain't a picktre B";
     $uploadOk = 0;
 }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-    echo "Try Again Sweaty";
+    echo "Upload Failed: Try Again Sweaty";
 // if everything is ok, try to upload file
 } else {
 
