@@ -24,6 +24,7 @@
     <?php
         include 'php/uploadHandler.php';
     ?>
+    
 
     </div>
 </body>

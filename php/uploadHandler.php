@@ -29,7 +29,6 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-    echo "Upload Failed: Try Again Sweaty";
 // if everything is ok, try to upload file
 } else {
 
@@ -39,11 +38,9 @@ $newname = $imageName."-".$email.".".$ext;
 $target = 'uploads/'.$newname;
 
     if (move_uploaded_file( $_FILES['fileToUpload']['tmp_name'], $target)) {
-        $imageName = $_REQUEST['imageName'];
-        echo $imageName;
-        echo "Your picktre has been uploddded.";
+        header("Location: /thanks.html");
+    exit;
     } else {
-        echo "Something went wrong here.";
     }
 }
 ?>
